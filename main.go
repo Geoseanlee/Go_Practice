@@ -8,15 +8,15 @@ func getUserMap(names []string, phoneNumbers []int) (map[string]user, error) {
 		return nil, errors.New("invalid sizes")
 	}
 
-	// create a map
 	userMap := make(map[string]user)
 
-	// iterate over the names and phone numbers
+	// iterate
 	for i := 0; i < len(names); i++ {
 		userMap[names[i]] = user{names[i], phoneNumbers[i]}
 	}
 
 	return userMap, nil
+
 }
 
 type user struct {
